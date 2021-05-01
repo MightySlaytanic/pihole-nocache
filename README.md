@@ -14,7 +14,9 @@ If you are wondering why I want to set it to zero, it is because I'll use unboun
 
 **WARNING**: the image is automatically rebuilt every night, if the official image pihole-pihole:latest image is updated. Since I'm modifying the /root/ph_install.sh initialization script it can stop working its behavior is changed.
 
-    sed -i -e "s:CACHE_SIZE=[0-9]\+:CACHE_SIZE=0:g" /root/ph_install.sh
+```bash
+sed -i -e "s:CACHE_SIZE=[0-9]\+:CACHE_SIZE=0:g" /root/ph_install.sh
+```
 
 More info on my Medium article where I talk about my Pi-hole + Unbound home setup:
 https://medium.com/nerd-for-tech/recursive-dns-resolver-with-ad-blocking-features-dea766d4f703
