@@ -1,13 +1,19 @@
-# Sources
+# pihole-nocache
+
+## IMPORTANT UPDATE
+
+Official pihole/pihole image supports CUSTOM_CACHE_SIZE option so this custom image is no more needed to force it to ZERO.
+
+## Sources
 
 You can find Dockerfile source on GitHub:
 https://github.com/MightySlaytanic/pihole-nocache
 
-# Docker Hub Image
+## Docker Hub Image
 
 https://hub.docker.com/repository/docker/giannicostanzi/pihole-nocache
 
-# Pi-hole official image modified to remove caching
+## Pi-hole official image modified to remove caching
 
 This is an image based on *pihole/pihole:latest*  that simply forces CACHE_SIZE to ZERO.
 If you are wondering why I want to set it to zero, it is because I'll use unbound resolver with its own caching and DNSSEC validation, so I do not want Pi-hole caching to interfere with cache management of Unbound (if Pi-hole caches replies,  unbound cache refresh with prefetch is not triggered).
